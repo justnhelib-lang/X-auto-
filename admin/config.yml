@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "car_data"
+    label: "ڕێکخستنا ترۆمبێلان"
+    files:
+      - file: "cars.json"
+        label: "لیستا ترۆمبێلێن X Auto"
+        name: "cars_list"
+        fields:
+          - label: "ترۆمبێل"
+            name: "cars"
+            widget: "list"
+            fields:
+              - {label: "ناڤێ ترۆمبێلێ", name: "title", widget: "string"}
+              - {label: "مۆدێل (ساڵ)", name: "year", widget: "string"}
+              - {label: "کیلۆمەتر", name: "km", widget: "string"}
+              - {label: "نرخ ($)", name: "price", widget: "string"}
+              - {label: "ژمارا واتساپێ (ب کودی وڵات)", name: "whatsapp", widget: "string", default: "9647500000000"}
+              - {label: "وێنێ ترۆمبێلێ", name: "image", widget: "image"}
